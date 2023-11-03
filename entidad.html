@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con Navegación y Formulario</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="C:\Users\ivanp\OneDrive\Escritorio\sisigem\styles\styles.css"> <!-- Agregamos el archivo CSS personalizado -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap"> <!-- Agregamos la fuente personalizada "Lato" -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"> <!-- Agregamos la biblioteca Font Awesome -->
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sección de navegación en el lado izquierdo -->
+            <style>
+                /* Add CSS styles for the submenu */
+                .submenu {
+                    display: none;
+                }
+            </style>
+            
+            <script>
+                // Add JavaScript to toggle the submenu
+                document.addEventListener('DOMContentLoaded', function () {
+                    const submenuToggle = document.getElementById('submenuToggle');
+                    const submenu = document.querySelector('.with-submenu .submenu');
+            
+                    submenuToggle.addEventListener('click', function (event) {
+                        // Prevent the default behavior of the link (navigating to pagina_principal.html)
+                        event.preventDefault();
+            
+                        if (submenu.style.display === 'none' || submenu.style.display === '') {
+                            submenu.style.display = 'block';
+                        } else {
+                            submenu.style.display = 'none';
+                        }
+                    });
+                });
+            </script>
+            <!-- Sección de navegación en el lado izquierdo -->
+            <nav class="col-md-2 navbar-extended">
+                <div class="text-center">
+                    <h4 class="text-light">SISOGEM</h4>
+                </div>
+                <br>
+                <ul class="nav flex-column">
+                   
+
+                    <li class="nav-item with-submenu">
+                        <a class="nav-link text-light" href="entidad.html" id="submenuToggle">
+                            <i class="fas fa-list"></i> Entidad
+                            <span class="submenu-toggle">
+                                <i class="fas fa-angle-down"></i>
+                            </span>
+                        </a>
+                        <ul class="submenu">
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="documentosF.html">Documentos a firmar</a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+
+
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="acerca.html">
+                            <i class="fas fa-info-circle"></i> Marco Normativo
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="integrantes.html">
+                            <i class="fas fa-envelope"></i> Integrantes
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="sesiones.html">
+                            <i class="fas fa-info-circle"></i> Sesiones
+                        </a>
+                    </li>
+                    
+                    <br>
+                    <br>
+                    <br>
+                    <div class="text-center" style="margin-top: auto;">
+                        <h4 class="text-light"></h4>
+                        <img src="C:\Users\ivanp\OneDrive\Escritorio\sisigem\img\logo1.png" alt="Logo de SISOGEM" style="margin-top: auto;">
+                    </div>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="cerrar_sesion.html">
+                            <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                        </a>
+                    </li>
+                    <div class="user-info">
+                        <div class="user-info-content">
+                            <h7 class="text-light "> Nombre de Usuario</h7>
+                            <!-- Add user avatar or profile picture here -->
+                        </div>
+                        <div class="chat-box">
+                            <!-- You can place the chat interface here, similar to ChatGPT's -->
+                        </div>
+                    </div>
+                </ul>
+           
+            </nav>
+            </nav>
+            
+                </ul>
+            </nav>
+
+                    
+
+
+                   
+            
+            
+
+            <!-- Formulario en el lado derecho -->
+            <div class="col-md-4">
+                <div class="d-flex flex-column">
+                    <h1>Entidad</h1>
+                    <form>
+                       
+                        <div class="form-group">
+                            <label for "opciones">Seleccionar entidad:</label>
+                            <select class="form-control" id="opciones">
+                                <option>Seleciona</option>
+                                <option>Opción 2</option>
+                                <option>Opción 3</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary">Seleccionar</button>
+                    </form>
+                    <hr>
+                    <button class="btn btn-primary">Seleccionar Firma Digital</button>
+                   
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    
+    <script src="https://ajax.googleapis.com/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

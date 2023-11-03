@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con Navegación y Formulario</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="C:\Users\ivanp\OneDrive\Escritorio\sisigem\styles\styles.css"> <!-- Agregamos el archivo CSS personalizado -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap"> <!-- Agregamos la fuente personalizada "Lato" -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"> <!-- Agregamos la biblioteca Font Awesome -->
+</head>
+
+
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sección de navegación en el lado izquierdo -->
+            <style>
+                /* Add CSS styles for the submenu */
+                .submenu {
+                    display: none;
+                }
+            </style>
+            
+            <script>
+                // Add JavaScript to toggle the submenu
+                document.addEventListener('DOMContentLoaded', function () {
+                    const submenuToggle = document.querySelector('.with-submenu .submenu-toggle');
+                    const submenu = document.querySelector('.with-submenu .submenu');
+            
+                    submenuToggle.addEventListener('click', function () {
+                        if (submenu.style.display === 'none') {
+                            submenu.style.display = 'block';
+                        } else {
+                            submenu.style.display = 'none';
+                        }
+                    });
+                });
+            </script>
+          
+           <!-- Sección de navegación en el lado izquierdo -->
+           <nav class="col-md-2 navbar-extended">
+            <div class="text-center">
+                <h4 class="text-light">SISOGEM</h4>
+            </div>
+            <br>
+            <ul class="nav flex-column">
+               
+
+                <li class="nav-item with-submenu">
+                    <a class="nav-link text-light" href="entidad.html" id="submenuToggle">
+                        <i class="fas fa-list"></i> Entidad
+                        <span class="submenu-toggle">
+                            <i class="fas fa-angle-down"></i>
+                        </span>
+                    </a>
+                    <ul class="submenu">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="documentosF.html">Documentos a firmar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="Otros">Submenu Item 2</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="acerca.html">
+                        <i class="fas fa-info-circle"></i> Marco Normativo
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="integrantes.html">
+                        <i class="fas fa-envelope"></i> Integrantes
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="sesiones.html">
+                        <i class="fas fa-info-circle"></i> Sesiones
+                    </a>
+                </li>
+                
+                <br>
+                <br>
+                <br>
+                <div class="text-center" style="margin-top: auto;">
+                    <h4 class="text-light"></h4>
+                    <img src="C:\Users\ivanp\OneDrive\Escritorio\sisigem\img\logo1.png" alt="Logo de SISOGEM" style="margin-top: auto;">
+                </div>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="cerrar_sesion.html">
+                        <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                    </a>
+                </li>
+                <div class="user-info">
+                    <div class="user-info-content">
+                        <h7 class="text-light "> Nombre de Usuario</h7>
+                        <!-- Add user avatar or profile picture here -->
+                    </div>
+                    <div class="chat-box">
+                        <!-- You can place the chat interface here, similar to ChatGPT's -->
+                    </div>
+                </div>
+            </ul>
+       
+        </nav>
+        </nav>
+        
+            </ul>
+        </nav>
+
+
+
+            <div class="col-md-9">
+                <form action="submit_form.php" method="post" enctype="multipart/form-data">
+
+        <h2>Agregar un Nuevo Integrante</h2>
+
+        <div class="form-group">
+            <label for="full-name">Nombre Completo:</label>
+            <input type="text" id="full-name" name="full-name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="position">Cargo:</label>
+            <input type="text" id="position" name="position" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="dates">Fechas:</label>
+            <input type="date" id="dates" name="dates">
+        </div>
+
+        <div class="form-group">
+            <label for="options">Opciones:</label>
+            <select id="options" name="options">
+                <option value="Option 1">Option 1</option>
+                <option value="Option 2">Option 2</option>
+                <option value="Option 3">Option 3</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="pdf-file">Archivo PDF:</label>
+            <input type="file" id="pdf-file" name="pdf-file" accept=".pdf">
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Agregar Integrante">
+        </div>
+    </form>
+</div>
+
+
+
+</body>
+</html>

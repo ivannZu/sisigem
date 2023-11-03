@@ -1,0 +1,277 @@
+/* Estilo para la barra de navegación */
+.navbar-extended {
+    background-color: #6A0F49;
+    min-height: 100vh;
+    padding: 10px;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Estilo para los encabezados (h1, h2, etc.) con la fuente personalizada */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', sans-serif;
+}
+
+/* Estilo para los botones de documentos a firmar con la clase "btn-docs" */
+.btn-docs {
+    font-size: 12px; /* Reduzco el tamaño de la fuente */
+    padding: 6px 12px; /* Reduzco el espaciado interior del botón */
+    max-width: 150px; /* Establezco un ancho máximo para evitar que los botones sean muy largos */
+}
+
+.form-group {
+    display: block;
+    margin-bottom: 10px; /* Adjust the spacing as needed */
+}
+
+
+
+/* Style the form container */
+.form-container {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Style form labels and inputs */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    display: block;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select {
+    width: 40%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group input[type="file"] {
+    width: 30%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style the submit button */
+.form-group input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav-link.active {
+    color: rgb(0, 0, 0);
+}
+
+
+
+
+/* Style the navigation section */
+.nav {
+ 
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.nav h4 {
+    font-size: 6px;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav li {
+    margin-bottom: 15px;
+}
+
+/* Style navigation links */
+.nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+  /* Add styles to the navigation bar */
+  .navbar-extended {
+    background-color: #6A0F49; /* Background color */
+    border-right: 1px solid #555; /* Right border */
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.5); /* Right-side shadow */
+    transition: all 0.3s; /* Transition for smooth hover effect */
+  }
+
+  /* Style for the navigation links on hover */
+  .nav-item a:hover {
+    background-color: #555; /* Background color on hover */
+    color: #fff; /* Text color on hover */
+  }
+
+ 
+
+
+
+    .meeting-box {
+        width: 200px; /* Establece el ancho que desees */
+        height: 250px; /* Establece la altura que desees */
+        border: 1px solid #ddd; /* Add a border */
+        box-shadow: 1px 1px 1px #ccc; /* Add a shadow */
+        padding: 20px; /* Add padding for spacing within the box */
+        margin: 10px 0; /* Add margin to separate each box */
+        background-color: #fff; /* Optional: Set a background color */
+    }
+
+
+
+    /* Estilos para los botones de documentos a firmar con apariencia de tarjetas */
+.btn-docs {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    width: 9000px;
+    height: 100px;
+    
+}
+
+.btn-docs:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+/* acerca de*/
+.upload-box {
+    border: 2px solid #ccc; /* Add a border */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+    padding: 20px;
+    margin: 10px;
+    width: 1000px;
+}
+
+.upload-box h4 {
+    margin-bottom: 1
+    5px;
+}
+
+
+.upload-box button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.upload-box button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+/* otros adicional al nav*/
+.nav-item {
+    text-align: left; /* Adjust the text alignment as per your preference */
+    padding: 5px; /* Adjust the padding to control spacing between items */
+}
+
+/* Additional styling for sub-menu items */
+
+.nav-link {
+    display: block; /* Ensure the entire item area is clickable */}
+
+
+
+
+
+     /* Additional CSS for the form elements */
+     .container {
+        background-color: #f7f7f7;
+        padding: 18px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        width: 910px;
+    }
+
+
+    
+
+    h2 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .upload-box {
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+        width: 860px;
+    }
+
+    input[type="text"] {
+        width: 80%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .file-upload-section {
+        margin: 18px 0;
+    }
+
+
+
+
+    button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    /* Alert styles */
+    .alert {
+        margin: 10px 0;
+        padding: 10px;
+        background-color: #f44336;
+        color: #fff;
+        border-radius: 4px;
+    }
