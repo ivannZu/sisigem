@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con Navegación y Formulario</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="C:\Users\ivanp\OneDrive\Escritorio\sisigem\styles\styles.css"> <!-- Agregamos el archivo CSS personalizado -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap"> <!-- Agregamos la fuente personalizada "Lato" -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"> <!-- Agregamos la biblioteca Font Awesome -->
+  
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sección de navegación en el lado izquierdo -->
+            <style>
+                /* Add CSS styles for the submenu */
+                .submenu {
+                    display: none;
+                }
+            </style>
+            
+            <script>
+                // Add JavaScript to toggle the submenu
+                document.addEventListener('DOMContentLoaded', function () {
+                    const submenuToggle = document.querySelector('.with-submenu .submenu-toggle');
+                    const submenu = document.querySelector('.with-submenu .submenu');
+            
+                    submenuToggle.addEventListener('click', function () {
+                        if (submenu.style.display === 'none') {
+                            submenu.style.display = 'block';
+                        } else {
+                            submenu.style.display = 'none';
+                        }
+                    });
+                });
+            </script>
+            <!-- Sección de navegación en el lado izquierdo -->
+              <!-- Sección de navegación en el lado izquierdo -->
+              <nav class="col-md-2 navbar-extended">
+                <div class="text-center">
+                    <h4 class="text-light">SISOGEM</h4>
+                </div>
+        
+                <ul class="nav flex-column">
+                    <li class="nav-item with-submenu">
+                        <a class="nav-link text-light" href="entidadd.html" id="submenuToggle">
+                            <i class="fas fa-list"></i> Entidad
+                            <span class="submenu-toggle">
+                                <i class="fas fa-angle-down"></i>
+                            </span>
+                        </a>
+                        <ul class="submenu">
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="documentosF.html">Documentos a firmar</a>
+                            </li>
+                        </ul>
+                    </li>
+        
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="prueba.html">
+                            <i class="fas fa-info-circle"></i> Marco Normativo
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="integrantes.html">
+                            <i class="fas fa-envelope"></i> Integrantes
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="sesiones.html">
+                            <i class="fas fa-info-circle"></i> Sesiones
+                        </a>
+    
+    
+                        
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="formatos.html">
+                            <i class="fas fa-file-alt"></i> Formatos
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="indicadores.html">
+                            <i class="fas fa-chart-bar"></i> Indicadores
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="repositorio.html">
+                            <i class="fas fa-archive"></i> Repositorio
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="buzon_reportes.html">
+                            <i class="fas fa-exclamation-triangle"></i> Buzón de Reporte de Irregularidades
+                        </a>
+                    </li>
+    
+                        <!-- Responsive Logo -->
+                    <div class="text-center">
+                    <h4 class="text-light"></h4>
+                   
+                    <img src="C:\Users\ivanp\OneDrive\Escritorio\sisigem\img\logo1.png" alt="Logo de SISOGEM" class="img-fluid" style="max-width: 45%;">
+                          </div>
+        
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="cerrar_sesion.html">
+                            <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                        </a>
+                    </li>
+                    <div class="user-info">
+                        <div class="user-info-content text-center text-light">
+                            <h7>Hola @ivan</h7>
+                            <!-- Add user avatar or profile picture here -->
+                        </div>
+                    </div>
+                    
+                </ul>
+    
+            </nav>
+
+                   <!--aqui termina el nav-->  
+
+                    
+
+
+                   
+            
+            
+
+            <!-- Formulario en el lado derecho -->
+            <div class="col-md-4">
+                <div class="d-flex flex-column">
+                   
+<!-- Formulario en el lado derecho -->
+
+        <h1>Buzon de reportes</h1>
+
+        <!-- Your existing content goes here -->
+
+        <!-- New section for reporting irregularities -->
+      
+    
+    
+
+            
+
+
+<div class="mt-4">
+    <h4>Reportar Irregularidades</h4>
+    <p>Cualquier usuario puede reportar irregularidades de manera anónima.</p>
+
+    <!-- Textarea for users to write the problem -->
+    <div class="form-group">
+        <label for="problemDescription">Descripción del Problema:</label>
+        <textarea class="form-control" id="problemDescription" rows="4" placeholder="Escribe aquí el problema"></textarea>
+    </div>
+
+    <!-- Button to send an alert (correo) -->
+    <button class="btn btn-primary" onclick="sendAlert()">Enviar Alerta</button>
+</div>
+
+</div>
+</div>
+  
+
+
+
+   
+    
+    
+<script>
+    // Function to handle sending the alert
+    function sendAlert() {
+        // Get the problem description from the textarea
+        var problemDescription = document.getElementById('problemDescription').value;
+
+        // Add your logic here to send an alert (correo) with the problem description
+        if (problemDescription.trim() !== '') {
+            alert("Alerta enviada a todos los usuarios con la siguiente descripción del problema:\n" + problemDescription);
+        } else {
+            alert("Por favor, escribe la descripción del problema antes de enviar la alerta.");
+        }
+    }
+</script>
+
+
+
+
+    
+    
+    
+    <script src="https://ajax.googleapis.com/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -23,14 +23,11 @@
             <script>
                 // Add JavaScript to toggle the submenu
                 document.addEventListener('DOMContentLoaded', function () {
-                    const submenuToggle = document.getElementById('submenuToggle');
+                    const submenuToggle = document.querySelector('.with-submenu .submenu-toggle');
                     const submenu = document.querySelector('.with-submenu .submenu');
             
-                    submenuToggle.addEventListener('click', function (event) {
-                        // Prevent the default behavior of the link (navigating to pagina_principal.html)
-                        event.preventDefault();
-            
-                        if (submenu.style.display === 'none' || submenu.style.display === '') {
+                    submenuToggle.addEventListener('click', function () {
+                        if (submenu.style.display === 'none') {
                             submenu.style.display = 'block';
                         } else {
                             submenu.style.display = 'none';
@@ -38,10 +35,8 @@
                     });
                 });
             </script>
-       
 
 
-        <!-- Sección de navegación en el lado izquierdo -->
            <!-- Sección de navegación en el lado izquierdo -->
            <nav class="col-md-2 navbar-extended">
             <div class="text-center">
@@ -132,7 +127,7 @@
         </nav>
                 
                     
-
+ <!--aqui termina el nav-->
 
                    
             
@@ -147,8 +142,10 @@
                       
                     <h4>Documentos a Firmar:</h4>
                     <br>
-                    <button class="btn btn-info btn-docs" style="color: black; font-family: Arial, sans-serif;">Lista de Asistencia</button>
-                    <button class="btn btn-info btn-docs ml-2" style="color: black; font-family: Arial, sans-serif;">Acta de Sesión</button>
+                    <button class="btn btn-docs ml-2" style="color: white; background-color: #6A0F49; font-family: Arial, sans-serif;">Acta de Sesión</button>
+
+                    <button class="btn btn-docs ml-2" style="color: white; background-color: #6A0F49; font-family: Arial, sans-serif;">Acta de Sesión</button>
+
                     
 
                 </div>

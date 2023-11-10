@@ -22,16 +22,13 @@
             </style>
             
             <script>
-                // Add JavaScript to toggle the submmenuu
+                // Add JavaScript to toggle the submenu
                 document.addEventListener('DOMContentLoaded', function () {
-                    const submenuToggle = document.getElementById('submenuToggle');
+                    const submenuToggle = document.querySelector('.with-submenu .submenu-toggle');
                     const submenu = document.querySelector('.with-submenu .submenu');
             
-                    submenuToggle.addEventListener('click', function (event) {
-                        // Prevent the default behavior of the link (navigating to pagina_principal.html)
-                        event.preventDefault();
-            
-                        if (submenu.style.display === 'none' || submenu.style.display === '') {
+                    submenuToggle.addEventListener('click', function () {
+                        if (submenu.style.display === 'none') {
                             submenu.style.display = 'block';
                         } else {
                             submenu.style.display = 'none';
@@ -125,13 +122,11 @@
                     
                 </ul>
     
-    
-    
             </nav>
 
                     
 
-                    
+                     <!--aqui termina el nav-->
 
 
                    
