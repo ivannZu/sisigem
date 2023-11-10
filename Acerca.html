@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"> <!-- Agregamos la biblioteca Font Awesome -->
 </head>
 <body>
+    
     <div class="container-fluid">
         <div class="row">
             <!-- Sección de navegación en el lado izquierdo -->
@@ -19,6 +20,7 @@
                     display: none;
                 }
             </style>
+            
             
             <script>
                 // Add JavaScript to toggle the submenu
@@ -49,6 +51,29 @@
                     alert('Please select a PDF file to upload.');
                 }
             }
+
+
+            function agregarTarjeta() {
+    // Crea un nuevo elemento div para la tarjeta
+    const nuevaTarjeta = document.createElement("div");
+    nuevaTarjeta.className = "card-body";
+
+    // Agrega el contenido HTML de la tarjeta
+    nuevaTarjeta.innerHTML = `
+        <h5 class="card-title">Información del Formulario</h5>
+        <p class="card-text" id="fileInfo">Nombre del Archivo: N/A</p>
+        <a id="downloadLink" style="display: none;" download class="btn btn-primary">Descargar Archivo</a>
+        <a id="fileDownloadLink" style="display: none;" class="btn btn-primary" href="#">Descargar Archivo</a>
+    `;
+
+    // Agrega la nueva tarjeta al contenedor de tarjetas (cambia el ID del contenedor según tu estructura HTML)
+    const contenedorDeTarjetas = document.getElementById("contenedorDeTarjetas");
+    contenedorDeTarjetas.appendChild(nuevaTarjeta);
+}
+
+// Asocia la función agregarTarjeta al botón "Guardar Archivos"
+document.getElementById("botonGuardarArchivos").addEventListener("click", agregarTarjeta);
+
         </script>
           
 
@@ -60,7 +85,7 @@
     
             <ul class="nav flex-column">
                 <li class="nav-item with-submenu">
-                    <a class="nav-link text-light" href="entidad.html" id="submenuToggle">
+                    <a class="nav-link text-light" href="entidadd.html" id="submenuToggle">
                         <i class="fas fa-list"></i> Entidad
                         <span class="submenu-toggle">
                             <i class="fas fa-angle-down"></i>
@@ -167,12 +192,63 @@
 
                 <br>
                 <!-- Botón "Guardar Archivos" al final del formulario -->
-                <button onclick="validateAndGuardarArchivos()">Guardar Archivos</button>
+                <button id="botonGuardarArchivos" onclick="validateAndGuardarArchivos()">Guardar Archivos</button>
             </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Información del Formulario</h5>
+
+                        <!-- Campo para mostrar el nombre del archivo -->
+                        <p class="card-text" id="fileInfo">Nombre del Archivo: N/A</p>
+
+                        <!-- Botón para descargar archivo -->
+                        <a id="downloadLink" style="display: none;" download class="btn btn-primary">Descargar Archivo</a>
+
+                        <!-- Agrega un enlace para descargar el archivo -->
+                        <a id="fileDownloadLink" style="display: none;" class="btn btn-primary" href="#">Descargar Archivo</a>
+                    </div>
+                </div>
+            </div>
+            <div id="contenedorDeTarjetas" class="card-container">
+                
+            </div>
+            
         </div>
+
+
+        
     </div>
 
+
+    
+   
+
     <script>
+        // Función para descargar archivo
+        function downloadFile() {
+            const downloadLink = document.getElementById('downloadLink');
+            downloadLink.click();
+        }
+
+        // Función para mostrar enlace de descarga
+        function showDownloadLink(filename) {
+            const fileInfo = document.getElementById('fileInfo');
+            fileInfo.textContent = `Nombre del Archivo: ${filename}`;
+
+            const downloadLink = document.getElementById('downloadLink');
+            downloadLink.href = 'ruta_del_archivo/' + filename;
+            downloadLink.style.display = 'block';
+        }
+
+        // Simula la selección de un archivo y muestra el enlace de descarga
+        showDownloadLink('nombre_del_archivo.pdf');
+    </script>
+    
+    <script>
+
+
         function validateAndGuardarArchivos() {
             var categoriaInput = document.getElementById("categoriaInput").value;
 

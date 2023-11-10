@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con Navegación y Formulario</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Enlaza el archivo CSS personalizado -->
+    <link rel="stylesheet" href="styles/styles.css">
+    
+    <!-- Enlaza la fuente personalizada "Lato" desde Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
+    <!-- Enlaza la biblioteca Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+</head>
+<body>
+
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sección de navegación en el lado izquierdo -->
+            <style>
+                /* Add CSS styles for the submenu */
+                .submenu {
+                    display: none;
+                }
+            </style>
+            
+            
+            <script>
+                // Add JavaScript to toggle the submenu
+                document.addEventListener('DOMContentLoaded', function () {
+                    const submenuToggle = document.querySelector('.with-submenu .submenu-toggle');
+                    const submenu = document.querySelector('.with-submenu .submenu');
+            
+                    submenuToggle.addEventListener('click', function () {
+                        if (submenu.style.display === 'none') {
+                            submenu.style.display = 'block';
+                        } else {
+                            submenu.style.display = 'none';
+                        }
+                    });
+                });
+            </script>
+          
+          <script>
+            function uploadFile(inputId) {
+                const inputElement = document.getElementById(inputId);
+                const file = inputElement.files[0];
+        
+                if (file) {
+                    // You can implement file upload logic here
+                    // For simplicity, we'll just show an alert with the file name
+                    alert(`File uploaded: ${file.name}`);
+                } else {
+                    alert('Please select a PDF file to upload.');
+                }
+            }
+
+
+            function agregarTarjeta() {
+    // Crea un nuevo elemento div para la tarjeta
+    const nuevaTarjeta = document.createElement("div");
+    nuevaTarjeta.className = "card-body";
+
+    // Agrega el contenido HTML de la tarjeta
+    nuevaTarjeta.innerHTML = `
+        <h5 class="card-title">Información del Formulario</h5>
+        <p class="card-text" id="fileInfo">Nombre del Archivo: N/A</p>
+        <a id="downloadLink" style="display: none;" download class="btn btn-primary">Descargar Archivo</a>
+        <a id="fileDownloadLink" style="display: none;" class="btn btn-primary" href="#">Descargar Archivo</a>
+    `;
+
+    // Agrega la nueva tarjeta al contenedor de tarjetas (cambia el ID del contenedor según tu estructura HTML)
+    const contenedorDeTarjetas = document.getElementById("contenedorDeTarjetas");
+    contenedorDeTarjetas.appendChild(nuevaTarjeta);
+}
+
+// Asocia la función agregarTarjeta al botón "Guardar Archivos"
+document.getElementById("botonGuardarArchivos").addEventListener("click", agregarTarjeta);
+
+        </script>
+          
+
+           <!-- Sección de navegación en el lado izquierdo -->
+           <nav class="col-md-2 navbar-extended">
+            <div class="text-center">
+                <h4 class="text-light">SISOGEM</h4>
+            </div>
+    
+            <ul class="nav flex-column">
+                <li class="nav-item with-submenu">
+                    <a class="nav-link text-light" href="entidadd.html" id="submenuToggle">
+                        <i class="fas fa-list"></i> Entidad
+                        <span class="submenu-toggle">
+                            <i class="fas fa-angle-down"></i>
+                        </span>
+                    </a>
+                    <ul class="submenu">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="documentosF.html">Documentos a firmar</a>
+                        </li>
+                    </ul>
+                </li>
+    
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="acerca.html">
+                        <i class="fas fa-info-circle"></i> Marco Normativo
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="integrantes.html">
+                        <i class="fas fa-envelope"></i> Integrantes
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="sesiones.html">
+                        <i class="fas fa-info-circle"></i> Sesiones
+                    </a>
+
+
+                    
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="formatos.html">
+                        <i class="fas fa-file-alt"></i> Formatos
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="indicadores.html">
+                        <i class="fas fa-chart-bar"></i> Indicadores
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="repositorio.html">
+                        <i class="fas fa-archive"></i> Repositorio
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="buzon_reportes.html">
+                        <i class="fas fa-exclamation-triangle"></i> Buzón de Reporte de Irregularidades
+                    </a>
+                </li>
+
+                    <!-- Responsive Logo -->
+                <div class="text-center">
+                <h4 class="text-light"></h4>
+               
+                <img src="C:\Users\ivanp\OneDrive\Escritorio\sisigem\img\logo1.png" alt="Logo de SISOGEM" class="img-fluid" style="max-width: 45%;">
+                      </div>
+    
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="cerrar_sesion.html">
+                        <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                    </a>
+                </li>
+                <div class="user-info">
+                    <div class="user-info-content text-center text-light">
+                        <h7>Hola @ivan</h7>
+                        <!-- Add user avatar or profile picture here -->
+                    </div>
+                </div>
+                
+            </ul>
+
+
+
+        </nav>
+
+
+
+     <!-- Formulario en el lado derecho -->
+     <div class="col-md-20">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sección de navegación en el lado izquierdo -->
+            <!-- ... (Tu código existente) ... -->
+            
+            <!-- Formulario en el lado derecho -->
+            <div class="col-md-20">
+                <div class="container">
+                    <h1>Marco Normativo Vigente</h1>
+                    
+
+                    <!-- Formulario para subir archivos PDF -->
+                    <form id="fileForm" enctype="multipart/form-data">
+                        <div class="file-upload-section">
+                            <h4>Denominación del instrumento normativo</h4>
+                            <input type="text" id="categoriaInput" placeholder="Escriba aquí" />
+
+                              <!-- Alerta de Bootstrap para campo vacío -->
+                <div class="alert alert-danger" id="emptyInputAlert" style="display: none;">
+                    Debes completar el campo de denominación del instrumento normativo.
+                </div>
+
+                            <div class="file-upload-section">
+                                <h5>Sube aquí el Decreto o Ley de Creación</h5>
+                                <input type="file" id="documentoInput1" accept=".pdf" required>
+                            </div>
+                            
+                            <div class="file-upload-section">
+                                <h5>Ordenamientos que regulan la administración</h5>
+                                <input type="file" id="documentoInput2" accept=".pdf" required>
+                            </div>
+                            
+                            <div class="file-upload-section">
+                                <h5>Sube Aquí el Reglamento interior</h5>
+                                <input type="file" id="documentoInput3" accept=".pdf" required>
+                            </div>
+                            
+                            <div class="file-upload-section">
+                                <h5>Sube Aqui el Manual organizacional</h5>
+                                <input type="file" id="documentoInput4" accept=".pdf" required>
+                            </div>
+                            
+                            <!-- Botón para cargar los archivos después de seleccionarlos -->
+                            <button type="button" onclick="uploadAllFiles()">Cargar PDFs</button>
+                            
+                        </div>
+                    </form>
+
+                    <!-- Lista de archivos cargados mostrados como tarjetas -->
+                    <div id="fileList"></div>
+
+                    <!-- Modal para editar títulos -->
+                    <div id="editModal" class="modal">
+                        <span class="close" onclick="cerrarModalEdicion()">&times;</span>
+                        <h2>Editar Título</h2>
+                        <input type="text" id="editedTitle">
+                        <button onclick="guardarTituloEditado()">Guardar</button>
+                    </div>
+                    
+                    <!-- Código JavaScript -->
+                    <script>
+                        const fileForm = document.getElementById('fileForm');
+                        const fileList = document.getElementById('fileList');
+                        const editModal = document.getElementById('editModal');
+                        const editedTitle = document.getElementById('editedTitle');
+
+                        let archivos = [];
+
+                        function uploadAllFiles() {
+    const inputFile1 = document.getElementById('documentoInput1');
+    const inputFile2 = document.getElementById('documentoInput2');
+    const inputFile3 = document.getElementById('documentoInput3');
+    const inputFile4 = document.getElementById('documentoInput4');
+
+
+    const files = [inputFile1.files[0], inputFile2.files[0], inputFile3.files[0], inputFile4.files[0]];
+
+    if (files.every(file => file && file.type === 'application/pdf')) {
+        const titulosPredeterminados = [
+            "Decreto de Creación",
+            "Ordenamientos de Admin",
+            "Reglamento Interior",
+            "Manual Organizacional"
+        ];
+
+        for (let i = 0; i < 4; i++) {
+            const nuevoArchivo = { titulo: titulosPredeterminados[i], archivo: files[i] };
+            archivos.push(nuevoArchivo);
+        }
+
+        actualizarListaArchivos();
+        fileForm.reset();
+    } else {
+        alert('Por favor, seleccione un archivo PDF para cada documento.');
+    }
+}
+
+                        function actualizarListaArchivos() {
+                            fileList.innerHTML = '';
+
+                            archivos.forEach((archivo, indice) => {
+                                const elementoLista = document.createElement('div');
+                                elementoLista.className = 'file-item';
+                                elementoLista.innerHTML = `
+                                    <div class="file-title">${archivo.titulo}</div>
+                                    <div class="file-download">
+                                        <a href="${URL.createObjectURL(archivo.archivo)}" download="${archivo.titulo}.pdf">Descargar</a>
+                                    </div>
+                                    <button onclick="editarTitulo(${indice})">Editar</button>
+                                    <button onclick="eliminarArchivo(${indice})">Eliminar</button>
+                                `;
+                                fileList.appendChild(elementoLista);
+                            });
+                        }
+
+                        function editarTitulo(indice) {
+                            editModal.style.display = 'block';
+                            editedTitle.value = archivos[indice].titulo;
+                            editedTitle.dataset.indice = indice;
+                        }
+
+                        function cerrarModalEdicion() {
+                            editModal.style.display = 'none';
+                        }
+
+                        function guardarTituloEditado() {
+                            const indice = editedTitle.dataset.indice;
+                            archivos[indice].titulo = editedTitle.value;
+                            actualizarListaArchivos();
+                            cerrarModalEdicion();
+                        }
+
+                        function eliminarArchivo(indice) {
+                            archivos.splice(indice, 1);
+                            actualizarListaArchivos();
+                        }
+
+                        window.onclick = function (evento) {
+                            if (evento.target === editModal) {
+                                cerrarModalEdicion();
+                            }
+                        };
+
+
+                        function agregarTarjeta() {
+    // Crea un nuevo elemento div para la tarjeta
+    const nuevaTarjeta = document.createElement("div");
+    nuevaTarjeta.className = "card-body";
+
+    // Obtiene el valor del input
+    const denominacion = document.getElementById("categoriaInput").value;
+
+    // Agrega el contenido HTML de la tarjeta con la denominación del instrumento normativo
+    nuevaTarjeta.innerHTML = `
+        <h5 class="card-title">${denominacion}</h5>
+        <p class="card-text" id="fileInfo">Nombre del Archivo: N/A</p>
+        <a id="downloadLink" style="display: none;" download class="btn btn-primary">Descargar Archivo</a>
+        <a id="fileDownloadLink" style="display: none;" class="btn btn-primary" href="#">Descargar Archivo</a>
+    `;
+
+    // Agrega la nueva tarjeta al contenedor de tarjetas (cambia el ID del contenedor según tu estructura HTML)
+    const contenedorDeTarjetas = document.getElementById("contenedorDeTarjetas");
+    contenedorDeTarjetas.appendChild(nuevaTarjeta);
+}
+
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+     </div>
+
+
+
+     
+    <!-- Enlaza las bibliotecas JavaScript necesarias -->
+    <script src="https://ajax.googleapis.com/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

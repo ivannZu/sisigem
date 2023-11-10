@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="C:\Users\ivanp\OneDrive\Escritorio\sisigem\styles\styles.css"> <!-- Agregamos el archivo CSS personalizado -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap"> <!-- Agregamos la fuente personalizada "Lato" -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"> <!-- Agregamos la biblioteca Font Awesome -->
+  
 </head>
 <body>
     <div class="container-fluid">
@@ -39,14 +40,15 @@
                 });
             </script>
             <!-- Sección de navegación en el lado izquierdo -->
-            <nav class="col-md-2 navbar-extended">
+              <!-- Sección de navegación en el lado izquierdo -->
+              <nav class="col-md-2 navbar-extended">
                 <div class="text-center">
                     <h4 class="text-light">SISOGEM</h4>
                 </div>
         
                 <ul class="nav flex-column">
                     <li class="nav-item with-submenu">
-                        <a class="nav-link text-light" href="entidad.html" id="submenuToggle">
+                        <a class="nav-link text-light" href="entidadd.html" id="submenuToggle">
                             <i class="fas fa-list"></i> Entidad
                             <span class="submenu-toggle">
                                 <i class="fas fa-angle-down"></i>
@@ -60,7 +62,7 @@
                     </li>
         
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="acerca.html">
+                        <a class="nav-link text-light" href="prueba.html">
                             <i class="fas fa-info-circle"></i> Marco Normativo
                         </a>
                     </li>
@@ -73,16 +75,40 @@
                         <a class="nav-link text-light" href="sesiones.html">
                             <i class="fas fa-info-circle"></i> Sesiones
                         </a>
-
-
+    
+    
                         
                     </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="formatos.html">
+                            <i class="fas fa-file-alt"></i> Formatos
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="indicadores.html">
+                            <i class="fas fa-chart-bar"></i> Indicadores
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="repositorio.html">
+                            <i class="fas fa-archive"></i> Repositorio
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="buzon_reportes.html">
+                            <i class="fas fa-exclamation-triangle"></i> Buzón de Reporte de Irregularidades
+                        </a>
+                    </li>
+    
                         <!-- Responsive Logo -->
                     <div class="text-center">
                     <h4 class="text-light"></h4>
-                    <br>
-                    <br>
-                    <img src="C:\Users\ivanp\OneDrive\Escritorio\sisigem\img\logo1.png" alt="Logo de SISOGEM" class="img-fluid" style="max-width: 100%;">
+                   
+                    <img src="C:\Users\ivanp\OneDrive\Escritorio\sisigem\img\logo1.png" alt="Logo de SISOGEM" class="img-fluid" style="max-width: 45%;">
                           </div>
         
                     <li class="nav-item">
@@ -90,17 +116,20 @@
                             <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
                         </a>
                     </li>
+                    <div class="user-info">
+                        <div class="user-info-content text-center text-light">
+                            <h7>Hola @ivan</h7>
+                            <!-- Add user avatar or profile picture here -->
+                        </div>
+                    </div>
                     
                 </ul>
-
-        
-                <div class="user-info">
-                    <div class="user-info-content text-center text-light">
-                        <h7>Hola @ivan</h7>
-                        <!-- Add user avatar or profile picture here -->
-                    </div>
-                </div>
+    
+    
+    
             </nav>
+
+                    
 
                     
 
@@ -119,8 +148,19 @@
                             <label for "opciones">Seleccionar entidad:</label>
                             <select class="form-control" id="opciones">
                                 <option>Seleciona</option>
-                                <option>Opción 2</option>
-                                <option>Opción 3</option>
+                                <option>Servicios de Salud de Michoacán</option>
+                                <option>Sistema Integral de Financiamiento para el Desarrollo de Michoacán (SI Financia)</option>
+                                <option>Sistema Michoacano de Radio y Televisión SMRyTV</option>
+                                <option>Sistema para el Desarrollo Integral de la Familia, Michoacán</option>
+                                <option>Telebachillerato Michoacán</option>
+                                <option>Universidad de la Ciénega del Estado de Michoacán de Ocampo (UCEMICH)</option>
+                                <option>Universidad Intercultural Indígena del Estado de Michoacán</option>
+                                <option>Universidad Politécnica de Lázaro Cárdenas Michoacán</option>
+                                <option>Universidad Politécnica de Uruapan</option>
+                                <option>Universidad Tecnológica de Morelia (UTM)</option>
+                                <option>Universidad Tecnológica del Oriente de Michoacán (UTOM)</option>
+                                <option>Universidad Virtual de Michoacán (UNIVIM)</option>
+                                <option>Compañía Inmobiliaria Fomento Turistico de Michoacán SA de CV</option>
                             </select>
                         </div>
                         <button class="btn btn-primary">Seleccionar</button>
