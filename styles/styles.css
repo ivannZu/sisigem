@@ -399,3 +399,183 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+
+
+h1 {
+    font-size: 36px;
+    color: #6A0F49;
+    margin: 0; /* Eliminar márgenes */
+    padding: 20px;
+    font-family: 'YourCustomFont', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    line-height: 1.2;
+    background-color: #F2EFE9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+    width: 1375px; /* Ocupar el ancho completo */
+    
+}
+
+h1:hover {
+    background-color: #D9C9B4; /* Change background color on hover */
+    color: #452537; /* Change text color on hover */
+}
+
+
+h2 {
+    font-size: 24px;
+    color: #3498db; /* Custom color for h2 */
+    margin-bottom: 15px;
+    font-family: 'YourCustomFont', sans-serif; /* Replace 'YourCustomFont' with your actual font */
+
+    /* Additional Styling */
+    text-align: center; /* Center-align the text */
+    text-transform: uppercase; /* Convert text to uppercase */
+    letter-spacing: 1px; /* Add a slight letter spacing for better readability */
+    font-weight: bold; /* Make the text bold */
+    line-height: 1.2; /* Adjust the line height for better spacing */
+
+    /* Background */
+    background-color: #ecf0f1; /* Replace with your desired background color */
+    padding: 15px; /* Add padding to give space around the text */
+    border-radius: 6px; /* Add rounded corners for a softer look */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+
+    /* Text shadow */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Add a subtle text shadow for emphasis */
+    
+    /* Transition */
+    transition: background-color 0.3s ease-in-out; /* Add a smooth transition effect on background color */
+
+    /* Hover effect */
+    cursor: pointer;
+
+    width: 1375px;
+}
+
+h2:hover {
+    background-color: #bdc3c7; /* Change background color on hover */
+    color: #2c3e50; /* Change text color on hover */
+}
+
+
+
+
+
+
+/* Styling for h4 */
+h4 {
+    font-size: 24px; /* Set the font size for h4 */
+    color: #333; /* Text color for h4 */
+    margin-bottom: 15px; /* Bottom margin for spacing */
+    font-family: 'YourCustomFont', sans-serif; /* Use your custom font for h4 */
+}
+
+/* Responsive styling for h4 on smaller screens */
+@media only screen and (max-width: 600px) {
+    h4 {
+        font-size: 20px; /* Adjust font size for smaller screens */
+    }
+}
+
+
+
+
+/* Estilo para el contorno de los campos al recibir el foco */
+input:focus,
+select:focus {
+    outline: none;
+    box-shadow: 0 0 5px #3498db;
+    border-color: #3498db;
+}
+
+/* Estilo para el contorno de los campos al pasar el ratón sobre ellos */
+input:hover,
+select:hover {
+    border-color: #3498db;
+}
+
+/* Estilo para la etiqueta del archivo seleccionado */
+input[type="file"]::before {
+    content: "Adjuntar PDF";
+    display: block;
+    background-color: #3498db;
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Estilo para el archivo seleccionado */
+input[type="file"]:valid::before {
+    content: "PDF seleccionado: " attr(value);
+    background-color: #2ecc71;
+}
+
+
+
+
+/* Estilo para la sección activa en el menú de navegación */
+.nav-item.active {
+    background-color: #585858; /* Color de fondo destacado */
+    color: #fff; /* Color del texto destacado */
+}
+
+
+
+h4 {
+    color: #333;
+    font-family: 'Roboto', sans-serif; /* Cambia la fuente predeterminada a Roboto */
+    padding: 1px;
+  
+  }
+
+  
+.loader-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    display: none;
+  }
+  
+  .loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    
+        body {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+  

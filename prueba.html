@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
     <!-- Enlaza la biblioteca Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    
 </head>
 <body>
 
@@ -106,7 +107,7 @@ document.getElementById("botonGuardarArchivos").addEventListener("click", agrega
                 </li>
     
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="acerca.html">
+                    <a class="nav-link text-light" href="prueba.html">
                         <i class="fas fa-info-circle"></i> Marco Normativo
                     </a>
                 </li>
@@ -124,7 +125,7 @@ document.getElementById("botonGuardarArchivos").addEventListener("click", agrega
                     
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item ">
                     <a class="nav-link text-light" href="formatos.html">
                         <i class="fas fa-file-alt"></i> Formatos
                     </a>
@@ -237,7 +238,42 @@ document.getElementById("botonGuardarArchivos").addEventListener("click", agrega
                     </div>
                     
                     <!-- Código JavaScript -->
-                    <script>
+                    <script >
+// Función para agregar la clase 'active' a la sección actual
+function resaltarSeccionActual() {
+    // Obtener el nombre de la página actual (puedes usar tu propia lógica)
+    var paginaActual = obtenerNombrePaginaActual();
+
+    // Eliminar la clase 'active' de cualquier elemento que la tenga
+    var elementosActivos = document.querySelectorAll('.nav-item.active');
+    elementosActivos.forEach(function (elemento) {
+        elemento.classList.remove('active');
+    });
+
+    // Agregar la clase 'active' al enlace de la página actual
+    var enlaceActual = document.querySelector('a[href="' + paginaActual + '"]');
+    if (enlaceActual) {
+        enlaceActual.closest('.nav-item').classList.add('active');
+    }
+}
+
+// Función para obtener el nombre de la página actual
+function obtenerNombrePaginaActual() {
+    // Implementa tu lógica para obtener el nombre de la página actual
+    // Puedes utilizar window.location.pathname u otras formas según tu estructura de URL
+    // Ejemplo simple:
+    return "prueba.html";
+}
+
+// Ejecutar la función al cargar la página
+document.addEventListener('DOMContentLoaded', function () {
+    resaltarSeccionActual();
+});
+
+
+
+
+
                         const fileForm = document.getElementById('fileForm');
                         const fileList = document.getElementById('fileList');
                         const editModal = document.getElementById('editModal');

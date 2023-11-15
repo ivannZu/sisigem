@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página con Navegación y Formulario</title>
+    <title>SISOGEM</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="styles/styles.css"> <!-- Agregamos el archivo CSS personalizado -->
+    <link rel="stylesheet" href="styles/styles.css"> <!-- Agregamos el archivo CSS personalizado -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap"> <!-- Agregamos la fuente personalizada "Lato" -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"> <!-- Agregamos la biblioteca Font Awesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
- 
+
+    
 </head>
 <body>
     <div class="container-fluid">
@@ -125,9 +125,9 @@
     
             </nav>
 
-                   <!--aqui termina el nav-->  
-
                     
+
+                     <!--aqui termina el nav-->
 
 
                    
@@ -137,60 +137,24 @@
             <!-- Formulario en el lado derecho -->
             <div class="col-md-4">
                 <div class="d-flex flex-column">
-                   
-<!-- Formulario en el lado derecho -->
+                    <h1>Formato</h1>
 
-        <h1>Buzon de reportes</h1>
-
-        <!-- Your existing content goes here -->
-
-        <!-- New section for reporting irregularities -->
-      
-    
-    
-
+                     <!-- Image and maintenance message -->
+        
             
+        </div>
+        <div class="text-center">
+           
+            <img src="mantenimiento.jpg" alt="Under Maintenance" class="img-fluid" style="max-width: 1000px;  margin: 1px;">
+            <p style="color: red; font-weight: bold; text-align: center;">Este apartado está en mantenimiento. Disculpe las molestias.</p>
 
-
-<div class="mt-4">
-    <h4>Reportar Irregularidades</h4>
-    <p>Cualquier usuario puede reportar irregularidades de manera anónima.</p>
-
-    <!-- Textarea for users to write the problem -->
-    <div class="form-group">
-        <label for="problemDescription">Descripción del Problema:</label>
-        <textarea class="form-control" id="problemDescription" rows="4" placeholder="Escribe aquí el problema"></textarea>
+        </div>
+        
     </div>
-
-    <!-- Button to send an alert (correo) -->
-    <button class="btn btn-primary" onclick="sendAlert()">Enviar Alerta</button>
-</div>
-
-</div>
-</div>
   
 
 
-
-   
-    
-    
-<script>
-    // Function to handle sending the alert
-    function sendAlert() {
-        // Get the problem description from the textarea
-        var problemDescription = document.getElementById('problemDescription').value;
-
-        // Add your logic here to send an alert (correo) with the problem description
-        if (problemDescription.trim() !== '') {
-            alert("Alerta enviada a todos los usuarios con la siguiente descripción del problema:\n" + problemDescription);
-        } else {
-            alert("Por favor, escribe la descripción del problema antes de enviar la alerta.");
-        }
-    }
-</script>
-
-<script>
+   <script>
     // Función para agregar la clase 'active' a la sección actual
 function resaltarSeccionActual() {
     // Obtener el nombre de la página actual (puedes usar tu propia lógica)
@@ -214,7 +178,7 @@ function obtenerNombrePaginaActual() {
     // Implementa tu lógica para obtener el nombre de la página actual
     // Puedes utilizar window.location.pathname u otras formas según tu estructura de URL
     // Ejemplo simple:
-    return "buzon_reportes.html";
+    return "formatos.html";
 }
 
 // Ejecutar la función al cargar la página
@@ -222,10 +186,9 @@ document.addEventListener('DOMContentLoaded', function () {
     resaltarSeccionActual();
 });
 
-
-</script>
-
-
+   </script>
+    
+    
     
     
     

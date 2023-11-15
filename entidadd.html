@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="styles/styles.css"><!-- Agregamos el archivo CSS personalizado -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap"> <!-- Agregamos la fuente personalizada "Lato" -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"> <!-- Agregamos la biblioteca Font Awesome -->
+
   
 </head>
 <body>
@@ -139,14 +140,16 @@
             
 
             <!-- Formulario en el lado derecho -->
+            
             <div class="col-md-4">
                 <div class="d-flex flex-column">
                     <h1>Entidad</h1>
 
-                    <div class="user-info">
-                        <div class="user-info-content  ">
+                    <div class="user-info" id="userInfoContainer">
+                        <div class="user-info-content">
                             <h7 class="ml-auto" id="usernamePlaceholder">Hola @ivan</h7>
-                            <p id="passwordInfo" class="ml-auto">Contraseña: ********</p>
+                            <p id="passwordInfo" class="ml-auto">pulsa aqui</p>
+                            <p id="credentialsDisplay" style="display: none;"></p>
                             <!-- Agrega aquí la imagen de perfil del usuario si es necesario -->
                         </div>
                     </div>
@@ -201,12 +204,49 @@
             const passwordInfo = document.getElementById('passwordInfo');
             passwordInfo.innerText = `Contraseña: ${loggedInPassword.replace(/./g, '*')}`;
         });
+
+
+
+
+        // Función para agregar la clase 'active' a la sección actual
+function resaltarSeccionActual() {
+    // Obtener el nombre de la página actual (puedes usar tu propia lógica)
+    var paginaActual = obtenerNombrePaginaActual();
+
+    // Eliminar la clase 'active' de cualquier elemento que la tenga
+    var elementosActivos = document.querySelectorAll('.nav-item.active');
+    elementosActivos.forEach(function (elemento) {
+        elemento.classList.remove('active');
+    });
+
+    // Agregar la clase 'active' al enlace de la página actual
+    var enlaceActual = document.querySelector('a[href="' + paginaActual + '"]');
+    if (enlaceActual) {
+        enlaceActual.closest('.nav-item').classList.add('active');
+    }
+}
+
+// Función para obtener el nombre de la página actual
+function obtenerNombrePaginaActual() {
+    // Implementa tu lógica para obtener el nombre de la página actual
+    // Puedes utilizar window.location.pathname u otras formas según tu estructura de URL
+    // Ejemplo simple:
+    return "entidadd.html";
+}
+
+// Ejecutar la función al cargar la página
+document.addEventListener('DOMContentLoaded', function () {
+    resaltarSeccionActual();
+});
+
+
+
+
+
     </script>
     
    
-    
-    
-    
+   
     
     
     

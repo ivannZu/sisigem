@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="styles/styles.css"> <!-- Agregamos el archivo CSS personalizado -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap"> <!-- Agregamos la fuente personalizada "Lato" -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"> <!-- Agregamos la biblioteca Font Awesome -->
+    
+
 </head>
 <body>
     <div class="container-fluid">
@@ -152,7 +154,40 @@
             </div>
         </div>
     </div>
-  
+  <script>
+
+    // Función para agregar la clase 'active' a la sección actual
+function resaltarSeccionActual() {
+    // Obtener el nombre de la página actual (puedes usar tu propia lógica)
+    var paginaActual = obtenerNombrePaginaActual();
+
+    // Eliminar la clase 'active' de cualquier elemento que la tenga
+    var elementosActivos = document.querySelectorAll('.nav-item.active');
+    elementosActivos.forEach(function (elemento) {
+        elemento.classList.remove('active');
+    });
+
+    // Agregar la clase 'active' al enlace de la página actual
+    var enlaceActual = document.querySelector('a[href="' + paginaActual + '"]');
+    if (enlaceActual) {
+        enlaceActual.closest('.nav-item').classList.add('active');
+    }
+}
+
+// Función para obtener el nombre de la página actual
+function obtenerNombrePaginaActual() {
+    // Implementa tu lógica para obtener el nombre de la página actual
+    // Puedes utilizar window.location.pathname u otras formas según tu estructura de URL
+    // Ejemplo simple:
+    return "documentosF.html";
+}
+
+// Ejecutar la función al cargar la página
+document.addEventListener('DOMContentLoaded', function () {
+    resaltarSeccionActual();
+});
+
+  </script>
     
     <script src="https://ajax.googleapis.com/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
